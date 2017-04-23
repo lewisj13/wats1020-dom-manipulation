@@ -5,8 +5,8 @@
 
 $( document ).ready(function() {
     var userInfo = {
-        firstName: '',
-        lastName: 'Doe'
+        firstName: 'Daenerys',
+        lastName: 'Targaryen'
     };
     var voteCounts = {
         great: 0,
@@ -24,7 +24,7 @@ $( document ).ready(function() {
 $('#login-form .btn').on('click', function(event) {
  $('#login-form').hide();
  $('.user-info').show();
- $('.user-fullname').text('' + userInfo.firstName + '' + userInfo.lastName);
+ $('.user-fullname').text(''+userInfo.firstName +' '+ userInfo.lastName);
 
 });
 
@@ -47,7 +47,7 @@ $(container).find('.details').each(function(index, el){
   if ($(el).is(':visible')){
     $(el).fadeOut();
     targetElement.innerText= "View Details"
-  } else {
+  } else{
     $(el).fadeIn();
      targetElement.innerText= "Hide Details"
      }
@@ -71,7 +71,7 @@ $('.vote').on('click', function(event){
       voteCounts.great++;
       voteCounts.total++;
 
-  } else {
+  } else{
     if ($(this).attr('data-vote')==='greatest'){
       voteCounts.greatest++;
       voteCounts.total++;
